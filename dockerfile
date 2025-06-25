@@ -90,4 +90,4 @@ CMD ["/start_services.sh"]
 
 # Set up sequence server and links.rb (has to be after it's running?)
 RUN mv /var/lib/gems/3.0.0/gems/sequenceserver-2.0.0/lib/sequenceserver/links.rb /var/lib/gems/3.0.0/gems/sequenceserver-2.0.0/lib/sequenceserver/links.rb.orig &&\
-    mv /var/www/genome-resources-clogmia/links.rb /var/lib/gems/3.0.0/gems/sequenceserver-2.0.0/lib/sequenceserver/links.rb
+    mv /var/www/genome-resources-megaselia/links.rb /var/lib/gems/3.0.0/gems/sequenceserver-2.0.0/lib/sequenceserver/links.rb

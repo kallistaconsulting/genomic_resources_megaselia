@@ -50,7 +50,7 @@ This takes ~5m to set up.
 1. On the local machine:
 
 ```bash
-cd /var/www/genomic_resources_megaselia/drupal
+cd genomic_resources_megaselia/drupal
 ```
 
 2. Edit init.sql

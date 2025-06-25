@@ -23,7 +23,7 @@ All tools are integrated with genomic data pulled from a GitHub release tarball.
 ```bash
 # Clone the repository
 git clone https://github.com/kallistaconsulting/genomic_resources_megaselia.git
-cd genomic_resources_clogmia
+cd genomic_resources_megaselia
 
 # Build and run the container
 sudo bash setup.sh
@@ -34,7 +34,7 @@ This runs a docker build command (docker build -t genome_browser .) and a docker
 Note: this will take about 30m to install, mainly due to installation of R packages.  Testing indicated 40Gb root directory was sufficient, 20Gb was not.
 
 From here, you can run any of the tools from a web browser with the proper links:
-* IP:3000?config=clogmia/config.json  → JBrowse2 instance
+* IP:3000?config=config.json  → JBrowse2 instance
 * IP:3838/freeCount/apps/DA/ → edgeR differential expression applications
 * IP:3838/freeCount/apps/FA/ → topGO and GSEA functional enrichment applications
 * IP:3838/crisprFinder → views pre-profiled transcriptome to aid in initial design of sgRNA
@@ -78,7 +78,7 @@ You will see a Drupal setup page, which you only have to do once.  Tested with S
 The site should come up automatically now.  All tools are linked with dynamic links, meaning the host IP does not matter.
 
 5. For security, please IMMEDIATELY:
-  * Go into the Access tab and log in as user: admin, password: clogmia.
+  * Go into the Access tab and log in as user: admin, password: megaselia.
   * Now the drupal admin menu will appear at the top of the site.  Click people, and next to admin, click edit.
   * Change your password by typing the preset password (megaselia) at the top under 'Current password', then your new password next to 'Password' and again below when prompted.  Scroll to the bottom and save.
 You now have secured access to this drupal site and can customize with basic Drupal methods.
@@ -119,7 +119,7 @@ Location: release, goes into /var/lib/gems/3.0.0/gems/sequenceserver-2.0.0/lib/s
 |------------------|------|------------------------------------|--------------------------------------------------------------|
 | Shiny Server     | 3838 | /srv/shiny-server/ (c)             | Includes apps: freeCount, crisprFinder, crisprViewer         |
 | JBrowse 2        | 3000 | /jbrowse/megaselia/  (c)             | Preloaded with indexed Megaselia genome and GFF                |
-| SequenceServer   | 4567 | /data/blastdb/     (c)             | BLAST databases for Clogmia                                  |
+| SequenceServer   | 4567 | /data/blastdb/     (c)             | BLAST databases for Megaselia                                  |
 | BLAST+ Tools     | —    | /usr/local/bin/    (c)             | Version 2.16.0+, available in $PATH                          |
 | R                | —    | System-wide installation  (c)      | Includes core bioinformatics packages                        |
 | NGINX + PHP      | —    | /etc/nginx/        (l)             | Dependencies for Drupal                                      |

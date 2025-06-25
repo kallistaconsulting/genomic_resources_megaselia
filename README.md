@@ -42,7 +42,7 @@ From here, you can run any of the tools from a web browser with the proper links
 * IP:4567 → SequenceServer2.0 instance with blast databases and JBrowse2 link backs
 
 ## 2) Webpage set up (optional but recommended)
-Tools are integrated into a pre-configured Drupal website that is customizable as any Drupal site, but organizes the tools and resources in point and click interface to make it easy to remember.  There are additional items in the website such as pages for downloading the references used, publications associated with the site, etc.  An example is currently available at: http://149.165.151.125/home
+Tools are integrated into a pre-configured Drupal website that is customizable as any Drupal site, but organizes the tools and resources in point and click interface to make it easy to remember.  There are additional items in the website such as pages for downloading the references used, publications associated with the site, etc.  An example is currently available at: http://149.165.173.182/home
 
 This takes ~5m to set up.
 

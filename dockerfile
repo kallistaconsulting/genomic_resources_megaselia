@@ -56,7 +56,7 @@ RUN mkdir /var/www/ && \
     cd /var/www/ &&\
     #You can always download a release and import it, rather than pulling direct from github && \
     #COPY genome-resources-megaselia.tar.gz /var/www/ && \
-    wget https://github.com/kallistaconsulting/genomic_resources_megaselia/releases/download/vjun242025.0/genome-resources-megaselia.tar.gz &&\
+    wget https://github.com/kallistaconsulting/genomic_resources_megaselia/releases/download/vjun252025.1/genome-resources-megaselia.tar.gz &&\
     tar xfv genome-resources-megaselia.tar.gz && \ 
     rm genome-resources-megaselia.tar.gz
 

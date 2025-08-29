@@ -85,7 +85,7 @@ COPY ./scripts/makeIDmap.py /var/www/genome-resources-megaselia/blastdb
 RUN cd /var/www/genomic-resources-megaselia/genome_files/ && \
     python3 /var/www/genome-resources-megaselia/blastdb/makeIDmap.py GCA_04844405.1_UofC_Mab_1_genomic.gff3 > GCA_04844405.1_UofC_Mab_1_genomic.map  && \
     cp *fa ../blastdb && \
-    cp *map ../blastdb && \
+    cp *map ../blastdb
 
 # Format files and create blast databases set up to link between results and jbrowse.
 # We format the protein and transcript files to have names that are simply the protein_id and the associated locus_id.  We can then use the locus_id to link back to jbrowse. 

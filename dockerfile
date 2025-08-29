@@ -65,7 +65,7 @@ RUN mkdir -p /data/blastdb /srv/shiny-server
 # Download and rename resources for Megaselia
 RUN mkdir /var/www/ && \
     cd /var/www/ &&\
-    wget https://github.com/kallistaconsulting/genomic_resources_megaselia/releases/download/vaug282025.0/genome-resources-megaselia.tar.gz &&\
+    wget https://github.com/kallistaconsulting/genomic_resources_megaselia/releases/download/vaug292025.0/genome-resources-megaselia.tar.gz &&\
     tar xfv genome-resources-megaselia.tar.gz && \ 
     rm genome-resources-megaselia.tar.gz && \
     cd genome-resources-megaselia/genome_files && \

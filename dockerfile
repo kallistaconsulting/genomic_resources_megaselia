@@ -82,8 +82,8 @@ RUN mkdir /var/www/ && \
 # Create and move resources for blast database construction
 COPY ./scripts/makeIDmap.py /var/www/genome-resources-megaselia/blastdb
 
-RUN cd /var/www/genomic-resources-megaselia/genome_files/ && \
-    python3 /var/www/genome-resources-megaselia/blastdb/makeIDmap.py GCA_04844405.1_UofC_Mab_1_genomic.gff3 > GCA_04844405.1_UofC_Mab_1_genomic.map  && \
+RUN cd /var/www/genome-resources-megaselia/genome_files/ && \
+    python3 /var/www/genome-resources-megaselia/blastdb/makeIDmap.py GCA_048544405.1_UofC_Mab_1_genomic.gff3 > GCA_048544405.1_UofC_Mab_1_genomic.map  && \
     cp *fa ../blastdb && \
     cp *map ../blastdb
 
@@ -91,11 +91,11 @@ RUN cd /var/www/genomic-resources-megaselia/genome_files/ && \
 # We format the protein and transcript files to have names that are simply the protein_id and the associated locus_id.  We can then use the locus_id to link back to jbrowse. 
 COPY ./scripts/mapNames.py /var/www/genome-resources-megaselia/blastdb
 
-RUN cd /var/www/genomic-resources-megaselia/blastdb && \
+RUN cd /var/www/genome-resources-megaselia/blastdb && \
     sed -E -e 's/.*cds_/>/g' -e 's/_[0-9]+.*//g' GCA_048544405.1_UofC_Mab_1_cds_from_genomic.fa > GCA_048544405.1_UofC_Mab_1_cds_from_genomic.cleana.fa && \
     sed -E -e 's/.*prot_/>/g' -e 's/_[0-9]+.*//g' GCA_048544405.1_UofC_Mab_1_translated_cds.fa > GCA_048544405.1_UofC_Mab_1_translated_cds.cleana.fa && \
-    python3 mapNames.py GCA_04844405.1_UofC_Mab_1_genomic.map GCA_04844405.1_UofC_Mab_1_translated_cds.cleana.fa > GCA_04844405.1_UofC_Mab_1_translated_cds.clean.fa && \
-    python3 mapNames.py GCA_04844405.1_UofC_Mab_1_genomic.map GCA_04844405.1_UofC_Mab_1_cds_from_genomic.cleana.fa > GCA_04844405.1_UofC_Mab_1_cds_from_genomic.clean.fa && \
+    python3 mapNames.py GCA_048544405.1_UofC_Mab_1_genomic.map GCA_048544405.1_UofC_Mab_1_translated_cds.cleana.fa > GCA_048544405.1_UofC_Mab_1_translated_cds.clean.fa && \
+    python3 mapNames.py GCA_048544405.1_UofC_Mab_1_genomic.map GCA_048544405.1_UofC_Mab_1_cds_from_genomic.cleana.fa > GCA_048544405.1_UofC_Mab_1_cds_from_genomic.clean.fa && \
     makeblastdb -in GCA_048544405.1_UofC_Mab_1_genomic.fa -out Megaselia_abdita.genome.GCA_048544405.1 -dbtype nucl && \
     makeblastdb -in GCA_048544405.1_UofC_Mab_1_cds_from_genomic.clean.fa -out Megaselia_abdita.transcripts.GCA_048544405.1 -dbtype nucl && \ 
     makeblastdb -in GCA_048544405.1_UofC_Mab_1_translated_cds.clean.fa -out Megaselia_abdita.proteins.GCA_048544405.1 -dbtype prot

@@ -140,7 +140,9 @@ RUN cd /data/blastdb/ && \
 # if you mute the above R dependencies for time.
 RUN mv /var/www/genome-resources-megaselia/apps/freeCount/ /srv/shiny-server/ && \
     mv /var/www/genome-resources-megaselia/apps/crisprFinder/ /srv/shiny-server/ && \
-    mv /var/www/genome-resources-megaselia/apps/crisprViewer/ /srv/shiny-server/
+    mv /var/www/genome-resources-megaselia/apps/crisprViewer/ /srv/shiny-server/ && \
+    wget https://github.com/kallistaconsulting/genomic_resources_megaselia/releases/download/vsept252025v.0/BSgenome.Mabdita.NCBI.Sander_1.0.0.tar.gz && \
+    RUN R CMD INSTALL BSgenome.Mabdita.NCBI.Sander_1.0.0.tar.gz
 
 # Copy startup script
 COPY start_services.sh /start_services.sh

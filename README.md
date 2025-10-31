@@ -34,7 +34,7 @@ This runs a docker build command (docker build -t genome_browser .) and a docker
 Note: this will take about 30m to install, mainly due to installation of R packages.  Testing indicated 40Gb root directory was sufficient, 20Gb was not.
 
 From here, you can run any of the tools from a web browser with the proper links:
-* IP:3000?config=config.json  → JBrowse2 instance
+* IP:3000?config=megaselia/config.json  → JBrowse2 instance
 * IP:3838/freeCount/apps/DA/ → edgeR differential expression applications
 * IP:3838/freeCount/apps/FA/ → topGO and GSEA functional enrichment applications
 * IP:3838/crisprFinder → views pre-profiled transcriptome to aid in initial design of sgRNA

@@ -32,8 +32,5 @@ mysql -u root -p drupal < /home/exouser/genomic_resources_megaselia/drupal/drupa
 systemctl restart nginx
 
 # Pull and Move Files for Download
-mkdir /var/www/html/files
-docker cp genome_browser:/var/www/genome-resources-megaselia/genome_files/Megaselia_abdita.repeatmasked_vNCBI.fa /var/www/html/files/
-docker cp genome_browser:/var/www/genome-resources-megaselia/genome_files/Megaselia_vNCBI.gff3 /var/www/html/files/
-docker cp genome_browser:/var/www/genome-resources-megaselia/genome_files/Megaselia.proteins_vNCBI.fa /var/www/html/files/
-docker cp genome_browser:/var/www/genome-resources-megaselia/genome_files/Megaselia.transcripts_vNCBI.fa /var/www/html/files/
+# No files currently needed.
+# mkdir /var/www/html/files

@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y \
     libssl-dev libcurl4-openssl-dev libxml2-dev zlib1g-dev \
     && apt-get clean
 
-# Install Node.js 18
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+# Install Node.js 22
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
     apt-get install -y nodejs
 
 # Install Latest version of BLAST+

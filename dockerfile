@@ -143,7 +143,6 @@ RUN mv /var/www/genome-resources-megaselia/apps/freeCount/ /srv/shiny-server/ &&
     mv /var/www/genome-resources-megaselia/apps/crisprViewer/ /srv/shiny-server/ && \
     wget https://github.com/kallistaconsulting/genomic_resources_megaselia/releases/download/v1.0.0/BSgenome.Mabdita.NCBI.Sander_1.0.0.tar.gz && \
     sed -i "s/HOST_IP/$HOST_IP/g" /srv/shiny-server/crisprViewer/app.R && \
-    sed -i "s/HOST_IP/$HOST_IP/g" /srv/shiny-server/crisprFinder/app.R && \
     R CMD INSTALL BSgenome.Mabdita.NCBI.Sander_1.0.0.tar.gz
 
 # Copy startup script

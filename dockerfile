@@ -139,7 +139,7 @@ RUN cd /data/blastdb/ && \
 # Populate shiny apps (require dependencies to run, but this will not fail 
 # if you mute the above R dependencies for time.
 RUN mv /var/www/genome-resources-megaselia/apps/freeCount/ /srv/shiny-server/ && \
-    mv /var/www/genome-resources-megaselia/apps/crisprFinder/ /srv/shiny-server/ && \
+    mv /var/www/genome-resources-megaselia/apps/crispRdesignR /srv/shiny-server/ && \
     mv /var/www/genome-resources-megaselia/apps/crisprViewer/ /srv/shiny-server/ && \
     wget https://github.com/kallistaconsulting/genomic_resources_megaselia/releases/download/v1.0.0/BSgenome.Mabdita.NCBI.Sander_1.0.0.tar.gz && \
     R CMD INSTALL BSgenome.Mabdita.NCBI.Sander_1.0.0.tar.gz

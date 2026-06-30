@@ -65,7 +65,7 @@ RUN mkdir -p /data/blastdb /srv/shiny-server
 # Download and rename resources for Megaselia
 RUN mkdir /var/www/ && \
     cd /var/www/ &&\
-    wget https://github.com/kallistaconsulting/genomic_resources_megaselia/releases/download/vsept252025v.0/genome-resources-megaselia.tar.gz &&\   
+    wget https://github.com/kallistaconsulting/genomic_resources_megaselia/releases/download/v1.0.0/genome-resources-megaselia.tar.gz &&\   
     tar xfv genome-resources-megaselia.tar.gz && \ 
     rm genome-resources-megaselia.tar.gz && \
     cd genome-resources-megaselia/genome_files && \
@@ -141,7 +141,7 @@ RUN cd /data/blastdb/ && \
 RUN mv /var/www/genome-resources-megaselia/apps/freeCount/ /srv/shiny-server/ && \
     mv /var/www/genome-resources-megaselia/apps/crisprFinder/ /srv/shiny-server/ && \
     mv /var/www/genome-resources-megaselia/apps/crisprViewer/ /srv/shiny-server/ && \
-    wget https://github.com/kallistaconsulting/genomic_resources_megaselia/releases/download/vsept252025v.0/BSgenome.Mabdita.NCBI.Sander_1.0.0.tar.gz && \
+    wget https://github.com/kallistaconsulting/genomic_resources_megaselia/releases/download/v1.0.0/BSgenome.Mabdita.NCBI.Sander_1.0.0.tar.gz && \
     R CMD INSTALL BSgenome.Mabdita.NCBI.Sander_1.0.0.tar.gz
 
 # Copy startup script
